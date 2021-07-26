@@ -1,2 +1,1 @@
-# mygitactions
-test github actions
+# Repo for Estadistica 2 class
