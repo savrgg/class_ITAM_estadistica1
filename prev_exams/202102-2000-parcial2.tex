@@ -8,6 +8,7 @@
 \usepackage{xcolor}
 
 \renewcommand\familydefault{\sfdefault}
+\renewcommand{\theenumi}{\Alph{enumi}}
 \usepackage{tgheros}
 
 \usepackage{amsmath}
@@ -15,7 +16,8 @@
 \usepackage{enumerate}
 \usepackage{multicol}
 \usepackage{tikz}
-\usepackage[spanish]{babel}
+\usepackage[spanish, es-nodecimaldot]{babel}
+\usepackage{enumitem}
 
 \usepackage{geometry}
 \geometry{left=25mm,right=25mm,bindingoffset=0mm, top=20mm,bottom=20mm}
@@ -104,113 +106,173 @@
   
   \begin{questions}
   
-\question (10 pts) En un zoológico deciden hacer una ampliación al área de elefantes por lo que se realiza una licitación donde se postulan 4 empresas. La primer empresa promete terminar la obra en 20 dias, la segunda empresa acabarlo en 25, la tercera empresa en 30 dias y la cuarta en 35 dias. Debido a cuestiones legales, todas las empresas tienen la misma probabilidad de ser elegidas. Considerando estos datos:
+\question \textbf{(15 pts)} En un zoológico deciden hacer una ampliación al área de elefantes por lo que se realiza una licitación donde se postulan 4 empresas. La primer empresa promete terminar la obra en 20 dias, la segunda empresa acabarlo en 25, la tercera empresa en 30 dias y la cuarta en 35 dias. Debido a cuestiones legales, todas las empresas tienen la misma probabilidad de ser elegidas. Considerando estos datos:
 
-¿Cuál es el tiempo esperado para terminar la obra?
-¿Cuál es su varianza? Interpreta
+\begin{enumerate}[label=\Alph*)]
+\item (2pts) ¿Cuál es el tiempo esperado para terminar la obra?
+\item (2pts) ¿Cuál es la varianza? 
+\item (1pt) Interpreta el resultado
+\end{enumerate}
 
 El costo de la obra está en función del tiempo, por lo que a menor tiempo de obra se incurren en mayores costos. En particular, se puede modelar la función del costo como:
 
-C(T) = 10T**2+1000T+505
 
-Calcule el valor esperado y la varianza del costo. Interpreta
+$$C(T) = 10T^2+1000T+505$$
 
-\question (10 pts) 
-Una marca de whisky llamada Juanito Caminante cuenta con distintas submarcas que se venden de acuerdo a la siguiente distribución de probabilidad f(x). Adicional, se presenta el ingreso por botella:
 
-Submarca, probabilidad, ingreso por botella
-Paliacate rojo c/2! 300
-Paliacate negro c/3! 800
-Paliacate dorado c/3! 1200
-Paliacate verde c/4! 1800
-Paliacate azul c/5! 5000
+\begin{enumerate}[label=\Alph*)]
+\item (2pts) Calcule el valor esperado del costo
+\item (7pts) Calcule la varianza del costo. 
+\item (1pt) Interpreta el resultado
+\end{enumerate}
 
-a) Obtenga el valor de c que hace que f(x) sea una función de distribución.
+Al no ser independiente en la covarianza, se debe calcular usando la fórmula vista en clase: $cov(X,Y) = E(XY) - E(X)E(Y)$
 
-b) Obtenga el valor esperado del costo por botella y la varianza del costo por botella 
+\question \textbf{(10 pts)}
+Una marca de whisky llamada Juanito Caminante cuenta con distintas submarcas que se venden de acuerdo a la siguiente distribución de probabilidad f(x). Adicional, se presentan los ingresos por botella:
 
-c) Si se venden 1000 botellas al dia, encuentre el ingreso esperado para un día de venta 
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+\hline
+Submarca & Probabilidad & Costo por botella (C) & Ingreso por botella (I)\\
+ \hline
+ Paliacate rojo & $\frac{k}{2!}$ & 200 & 300 \\ 
+ Paliacate negro & $\frac{k}{3!}$ & 600 & 800 \\ 
+ Paliacate dorado & $\frac{k}{3!}$ & 800 & 1200 \\ 
+ Paliacate verde & $\frac{k}{4!}$ & 1200 & 1800 \\
+ Paliacate azul & $\frac{15k}{5!}$ & 3000 & 5000 \\ 
+ \hline
+\end{tabular}
+\end{center}
 
-\question (10 pts) 
-Un alumno de una prestigiosa universidad decide ir a una fiesta de Halloween. El número de refrescos que tomará en toda la fiesta sigue la siguiente distribución:
 
-x p(x)
-1 0.1
-2 0.2
-3 0.25
-4 0.2
-5 0.25
+\begin{enumerate}[label=\Alph*)]
+\item (2pts) Obtenga el valor de k que hace que f(x) sea una función de distribución.
+\item (3pts) Obtenga el valor esperado del costo por botella y la varianza del costo por botella 
+\item (3pts) Obtenga el valor esperado del ingreso por botella y la varianza del ingreso por botella 
+\item (2pts) Si se venden 1000 botellas al dia, encuentre la utilidad esperada para un día de venta (utilidad=ingreso-costo)
+\end{enumerate}
 
-a) Encuentre el valor esperado, la moda, la mediana y la desviación estándar del número de refrescos
+\question \textbf{(10 pts)}
+Un alumno de una H. institución decide ir a una fiesta de Halloween aftereco. El número de refrescos (x) que tomará en toda la fiesta sigue la siguiente distribución:
 
-b) Grafique la función de probabilidad
 
-c) Obtenga la función de probabilidad acumulada y grafíquela
+\begin{center}
+\begin{tabular}{ |c|c|c|c| } 
+\hline
+x & p(x) \\
+\hline
+1 & 0.1 \\
+2 & 0.2 \\
+3 & 0.25 \\
+4 & 0.2 \\
+5 & 0.25 \\
+\hline
+\end{tabular}
+\end{center}
 
-\question (10 pts) 
-El consumo diario de croquetas de Colmillo sigue la siguiente función de distribución:
+\begin{enumerate}[label=\Alph*)]
+\item (4pts) Encuentre el valor esperado, la moda, la mediana y la desviación estándar del número de refrescos
+\item (4pts) Suponiendo que el aumento en peso (AP) del alumno por refresco consumido sigue la siguiente función $AP(X) = 0.1X^2+0.25X$, encuentre el aumento de peso esperado del alumno
+\item (2pts) Obtenga la función de probabilidad acumulada y grafíquela
+\end{enumerate}
 
-Kxe**(-x/5)
+\question \textbf{(15 pts)}
+El consumo mensual de kilos de croquetas de Colmillo sigue la siguiente función de distribución:
 
-a) Determine el valor de k para que f(x) sea una función de distribución
-b) Obtenga la función de probabilidad acumulada
-c) Si para un dia particular solo se tienen xx kilos de croqueta, ¿Cuál es la probabilidad que las croquetas sean insuficientes para colmillo?
+\[   
+f(x) = 
+     \begin{cases}
+       Kxe^{-\frac{x}{5}} & x \geq 0\\
+       0 & \text{en otro caso} \\
+     \end{cases}
+\]
+$$$$
 
-\question (10 pts) 
-El costo total de la cuenta de un restaurante sigue una variable alatoria que sigue la siguiente función de densidad:
+\begin{enumerate}[label=\Alph*)]
+\item (6pts) Determine el valor de k para que f(x) sea una función de distribución
+\item (6pts) Obtenga la función de probabilidad acumulada. Compruebe que si X = límite inferior y Y = límite superior, entonces F(X) = 0 y F(Y) = 1
+\item (3pts) Si para un mes particular solo se tienen 25 kilos de croqueta, ¿Cuál es la probabilidad que las croquetas sean insuficientes para colmillo?
+\end{enumerate}
 
-f(x) = a+bx  para 0<x<2000
+\question \textbf{(10 pts)}
+El monto total de la cuenta en cientos de pesos (x) de un restaurante es una variable alatoria que sigue la siguiente función de densidad:
 
-a) Calcule los valores de a y b tal que el valor esperado del costo total sea igual a 1500
 
-b) La utilidad neta para el restaurante está en función del monto de la cuenta y sigue la siguiente distribución: 
+\[   
+f(x) = 
+     \begin{cases}
+       a+bx & 0 \leq x \leq 10\\
+       bx & 10 < x \leq 20\\
+       0 & \text{en otro caso} \\
+     \end{cases}
+\]
 
-UN = 1/2x+c
+Adicional, Se sabe que $P(0 \geq x \geq 10) = 0.5$
 
-Obtenga el valor esperado, la moda y la varianza de la utilidad neta.
+\begin{enumerate}[label=\Alph*)]
+\item (5pts) Calcule los valores de a y b de tal manera que $f(x)$ sea una función de distribución (Nota, debido a que trabajamos con 4 decimales, puede ser que no integre exactamente 1, pero debe tener un rango de error de $\pm 0.01$)
+\item (5pts) La utilidad neta (UN) para el restaurante está en función del monto de la cuenta y sigue la siguiente distribución: 
+\end{enumerate}
+$$ UN(X) = \frac{X}{2}-c $$
+ 
+Donde $c$ es una constante dada. Obtenga el valor esperado, la moda y la varianza de la utilidad neta. (Usando los resultados de inciso a)
 
-\question (10 pts) 
-A partir de la siguiente tabla de probabilidad conjunta, calcule las siguientes probabilidades:
-     x
-y  0 1 2 
-0
-1
-2
-3
+\question \textbf{(10 pts)}
 
-1) Obtenga la distribución marginal de x y de y
-2) obtenga las siguientes probabilidades:
-P(X<=1)
-P(Y>1)
-P(X<=1, y<=1)
-P(Y-X>2)
-P(X>0|Y=2)
-3) Obtenga el coeficiente de correlación de X y Y
-4) Obtenga E(Y-X) y Var(Y-X)
+A partir de la siguiente tabla de probabilidad conjunta, calcule las siguientes probabilidades (los valores que toma \textbf{X} se expresan en los renglones, los valores que toma \textbf{Y} se expresan en las columnas):
 
-\question (10 pts) 
+\begin{center}
+\begin{tabular}{ |c|c|c| } 
+\hline
+p(x,y) & 1 & 2 \\
+\hline
+0 & 0.1 & 0.2 \\
+1 & 0.05 & 0.05 \\
+2 & 0.2 & 0.1 \\
+3 & 0.1 & 0.2  \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=\Alph*)]
+\item Obtenga la distribución marginal de X y la distribución marginal de Y
+\item (1pt) Obtenga: P(X<=1) y P(Y>1)
+\item (1pt) Obtenga: P(X<=1, y<=1) y P(X<=1, y>1)
+\item (1pt) Obtenga: P(Y-X>2)
+\item (1pt) Obtenga: P(X>0|Y=2)
+\item (4pts) Obtenga: coeficiente de correlación de X y Y
+\item (2pts) Obtenga E(Y-X) y Var(Y-X)
+\end{enumerate}
+
+\question \textbf{(10 pts)}
 Se lanzan dos dados. Sea X el número de unos que salen y Y el número de seis que aparecen.
-a) Obtenga la función de probabilidad conjunta de X y Y
-b) ¿Son independientes X y Y? Justifique por medio de probabilidad
-c) Calcule la covarianza y el coeficiente de correlación entre X y Y
-d) Si Z es el número de dados con valor diferente a 1 y 6, obtenga el valor esperado y la varianza de Z
+\begin{enumerate}[label=\Alph*)]
+\item (3pts) Obtenga la función de probabilidad conjunta de X y Y
+\item (1pts) ¿Son independientes X y Y? Justifique por medio del concepto de independencia de funciones de probabilidad que se vió en clase.  
+\item (3pts) Calcule la covarianza y el coeficiente de correlación entre X y Y
+\item (3pts) Si Z es el número de dados con valor diferente a 1 y 6, obtenga el valor esperado y la varianza de Z
+\end{enumerate}
 
-\question (10 pts) 
+\question \textbf{(10 pts)}
 El periodo de funcionamiento de un iphone hasta su primera falla (en años) se puede modelar por medio de la siguiente función de distribución acumulada:
 
-F(y) = 0 para y<0, 1-exp(-y**2) para y >=0
+\[   
+F(y) = 
+     \begin{cases}
+       0 & y<0\\
+      1-e^{-y^2} & y \geq 0 \\
+     \end{cases}
+\]
 
 Es decir la probabilidad de que falle en 0 años o menos es F(0) = 1-exp(0) = 0, la probabilidad que falle en 3 años o menos es F(3) = 1-exp(-9)
 
-a) Comprueba que F(y) cumple con las propiedades de función de distribución acumulada
-b) Calcule la proabilidad que el iphone no falle entre 1.5 y 3.5 años
-
-
-\question (10 pts) 
-una de integración por partes
-
-
-
+\begin{enumerate}[label=\Alph*)]
+\item (2pts) Comprueba que F(y) cumple con las propiedades de función de distribución acumulada
+\item (2pts) Calcule la proabilidad que el iphone no falle entre 1.5 y 3.5 años
+\item (4pts) Calcule la función de densidad correspondiente a la función de distribución acumulada
+\item (2pts) Compruebe que f(y) cumple con las propiedades de función de distribución (En caso de no poder integrar f(x), use como argumento la función F(x))
+\end{enumerate}
 
 
 \end{questions} 
