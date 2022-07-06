@@ -15,7 +15,7 @@
 \ProvidesClass{oxmathproblems}[2020/05/12 v1.3 Oxford Maths problem sheet class]
 
 % load in the main exam class with appropriate options
-\LoadClass[12pt,a4paper]{exam} 
+\LoadClass[9pt,a4paper]{exam} 
 
 %space out the lines by 25% more than the default (basically 1.5 line spacing)
 \linespread{1.25}
@@ -33,7 +33,7 @@
 \RequirePackage{ifthen,amsmath,amssymb,amsthm,bm,graphicx,color}
 
 %increase the printed page area width
-\extrawidth{0.5cm}
+\extrawidth{5cm}
 
 %increase header space on title page only
 \extraheadheight[1.5cm]{0cm}
