@@ -89,59 +89,61 @@
   
   \begin{document}
   
-  \title{Parcial 1 - Estadística I}
+  \title{Propuesta Final - Estadística I}
   
-  \author{ITAM, Otoño 2021}
+  \author{ITAM, Primavera 2022}
   
-  \date{04/10/2021}
+  \date{21/05/2022}
   
   \maketitle
   
   \section*{Instrucciones}
   
-El examen tiene una duración estricta de 1:40 horas y comienza a las 20:00 hrs. Por cada minuto de retraso se descontarán 5 pts por lo que se debe cuidar mucho el tiempo. Pasadas las 21:45 horas no se recibirán más exámenes. Se seleccionarán 5 exámenes aleatoriamente para justificar alguna respuesta de su examen en los últimos 15 minutos de clase, por lo que es necesario permanecer en la sala de zoom durante las dos horas. No es necesario contar con cámaras encendidas.\textbf{Cualquier práctica fraudulenta será notificada al departamento de estadística y será sancionada de acuerdo al reglamento.} 
-
-El examen consta de tres secciones. La primera es opción múltiple, V/F y ejercicios sencillos donde se deberá seleccionar la opción correcta. Para cada pregunta hay una sola respuesta correcta. Si se selecciona más de una opción será considerada como incorrecta. En la segunda sección se deberá desarrollar el problema planteado. La tercer sección consta de 2 ejercicios, de los cuales solo uno debe contestarse. Se debe cuidar la formalidad al escribir los resultados, ya que es parte de la calificación del problema. En caso de no tener el desarrollo de la pregunta, o bien se llegué a la respuesta sin una justificación se podrá anular la respuesta.  
-
 \vspace{10pt}
   
 
   
-  \section*{Seccion A: Opción múltiple y V/F(20 pts)}
+  \section*{Poisson y geométrica}
   
   \begin{questions}
   
-  \question (5 pts) CONCEPTOS DE ESTADÍSTICA: Se realizará un estudio donde los elementos de interés son las agencias que venden automóbiles. Identifique si la variable de interés es cualitativa o cuantitativa, discreta o continua y la escala de medición correspondiente. 
-  
+  \question (5 pts) El Centro de Aprendizaje Redacción y Lenguas estudió el número de errores ortográficos que cometen los estudiantes del ITAM al escribir un reporte de una cuartilla (X). Encontraron que la media de errores por cuartilla es de 3. 
   \begin{enumerate}
-  \item El número de automóviles por agencia
-  \item Número de visitas a la agencia por mes
-  \item Duración de las visitas más largas por mes
-  \item Costo mensual de la renta del local de la agencia
-  \item Temperatura en ºC promedio dentro de cada agencia
+  \item ¿Qué distribución se puede emplear para modelar los errores (X)?. Determine su media y su varianza\\
+  \textcolor{red}{$X \sim Pois(3), \\ E(X) = 3, \\ V(X) = 3$}
+  \item Determine ¿Cuál es la probabilidad que un estudiante cometa al menos 4 errores en la cuartilla? ¿Cuál es la probabilidad que un estudiante cometa exactamente 4 errores en la cuartilla? \\
+  \textcolor{red}{$P(X >= 4) =  1-P(X <= 3) = 1- 0.647 = 0.353$} \\
+  \textcolor{red}{$P(X = 4) =  P(X <= 4)-P(X <= 3) = 0.815 - 0.647 = 0.168$}
+  \item La calificación de la cuartilla se puede modelar como la función $C(X)=100-\frac{X^2}{6}$. ¿Cuál es la calificación esperada de esta cuartilla? \\
+  \textcolor{red}{$E(X^2) = V(X)+E(X)^2 = 3 + 9 = 12$} \\
+  \textcolor{red}{$E(C) = E(100-\frac{X^2}{6}) = 100-\frac{E(X^2)}{6} = 100 - \frac{12}{6} = 98$}
+
+  \item Se ha revisado una proporción de la cuartilla y se sabe que hay al menos 2 errores. ¿Cuál es la probabilidad que se tengan al menos 3 errores en la cuartilla completa? \\
+  \textcolor{red}{$P(X >= 3 | X >= 2 ) = \frac{P(X >= 3,X >= 2 )}{P(X >= 2)} = \frac{P(X >= 3)}{P(X>=2)} = \frac{1-P(X<=2)}{1-P(X<=1)} = \frac{0.577}{0.801} = 0.7203$}
+  
   \end{enumerate}
   
-  \question (9 pts) Determine si las siguientes afirmaciones son verdaderas o falsas. Justifique
-  
+    \question (5 pts) El número de llamadas que recibe el conmutador del ITAM por hora se puede modelar como una variable Poisson (X) con media de 15. Debido a condiciones del conmutador se conoce que a lo máximo atienda 20 llamadas por hora y deja las demás sin atender. 
+
   \begin{enumerate}
-  \item La media de un conjunto de datos no considera el valor máximo y minimo de los datos para su cálculo
-  \item La moda puede tener más de tres valores 
-  \item Es imposible que la moda sea igual a la mediana y a la media sean iguales
-  \item El coeficiente de variación es considerado un parámetro de centralidad
-  \item El IQR es considerado un parámetro de dispersión
-  \item El primer cuartil es menor o igual al mínimo de los datos
-  \item La mediana debe ser igual al menos a uno de los valores observados
-  \item La moda debe ser igual al menos a uno de los valores observados
-  \item La media debe ser igual al menos a uno de los valores observados
+  \item ¿Cuál es la probabilidad que se dejen llamadas sin atender? \\
+  \textcolor{red}{$P(X > 20) = 1- P(X<= 20) = 1-0.917 = 0.083$}
+  \item El ITAM incurre en un costo por llamada (tanto por las atendidas como por las no atendidas). El costo se puede modelar como: $C(X) = 100+10X$. Encuentre el Valor Esperado y la varianza del costo. \\
+  \textcolor{red}{$E(C) = E(100+10X) = 100+10E(X) = 100+10(15) = 250$} \\
+  \textcolor{red}{$V(C) = V(100+10X) = 100V(X) = 100(15) = 150$}
+  
+  \item Se sabe que se han recibido al menos 10 llamadas en una hora, ¿Cual es la probilidad de que se tengan más de 20 llamadas en esa hora? \\
+  \textcolor{red}{$P(X>20|X>=10) = \frac{P(X>20, X>=10)}{P(X>=10)} = \frac{P(X>20)}{P(X>=10)} = \frac{1 - P(X<=20)}{1-P(X<=9)} = \frac{1-0.917}{1-0.07} = \frac{0.083}{0.93} = 0.0892$}
+
+  \item Basándose en el inciso anterior, cual es el valor esperado 
+
   \end{enumerate}
   
-  \question (6 pts) 
-  Determine el \textbf{tamaño} del espacio muestral (cuantos elementos tiene, sin enumerarlos) para cada uno de los experimentos:
-  \begin{enumerate}
-  \item Se lanzan 10 veces una moneda de dos caras
-  \item Una urna contiene cinco bolas rojas, seis blancas, una azul y tres amarilla. Una segunda contiene cinco pelotas blancas y tres azules. Una bola es seleccionada de cada urna. 
-  \item Las urnas del ejercicio anterior son mezcladas en una urna y se extraen dos de ellas con reemplazo
-  \end{enumerate}
+  
+  
+  
+  
+  \
   
 \end{questions}
   
