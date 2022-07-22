@@ -1,8 +1,15 @@
 ---
 title: "Assignment 04 Otoño 2022"
-output: pdf_document
-date: '2022-07-16'
---- 
+output:
+  pdf_document: default
+  word_document: default
+date: '2022-07-21'
+---
+
+
+
+
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
