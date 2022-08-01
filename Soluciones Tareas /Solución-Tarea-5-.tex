@@ -1,0 +1,151 @@
+\documentclass{oxmathproblems}
+\usepackage{blindtext}
+\usepackage{hyperref}
+\usepackage{geometry}
+
+\course{ITAM - Estadística 1}
+\oxfordterm{ Respuestas Assignment 05}
+\sheetnumber{1}
+\sheettitle{}
+
+\begin{document}
+
+\begin{questions}
+
+\miquestion\textbf {Distribuciones de probabilidad.}
+
+\text {Tenemos que:}
+$$ \text {n = 10 } 
+\text {p = .04 }
+\text { q = .96 = (1-p)} 
+$$
+\text {Entonces:} 
+P(x $\leq$ 1) = 0.9418
+
+\miquestion\textbf{Distribuciones exponencial.}
+\text {Tenemos que:} 
+
+ \text{ y $\sim$ Poisson(7,7)} 
+ \text{ Dado que: }
+$$ \lambda = 7. $$
+ \text{ Entonces: } 
+ 
+ \begin{itemize}
+\item  a) 
+$$ 
+ = P( Y \leq 4) = P( \frac{y- \mu_y}{\sqrt(\sigma^2)} \leq \frac{4-7}{\sqrt(7)}) 
+ = 0.1729
+$$
+\item  b) P(3$<$ Y$\leq$8)
+ \text{ Es lo mismo que : } 
+$$ P(Y \leq 8) - P(Y < 3)
+=  P( \frac{y- \mu_y}{\sqrt(\sigma^2)} \leq \frac{8-7}{\sqrt(7)}) -  P( \frac{y- \mu_y}{\sqrt(\sigma^2)} < \frac{3-7}{\sqrt(7)}) = .643
+$$
+
+\item  c) P(3$<$Y$<$8)
+\text{ Es lo mismo que : } 
+$$ P(Y < 8) - P(Y < 3)
+=  P( \frac{y- \mu_y}{\sqrt(\sigma^2)} < \frac{8-7}{\sqrt(7)}) -  P( \frac{y- \mu_y}{\sqrt(\sigma^2)} < \frac{3-7}{\sqrt(7)}) \cong .5169
+$$ 
+\item  d) P(Y=8$\mid$Y$\leq$10)
+\text{ Es lo mismo que : }  
+$$ \frac{P( Y=8)}{P( Y \leq 10)} =  \frac{P(\frac{y- \mu_y}{\sqrt(\sigma^2)} =  \frac{8-7}{\sqrt(7)})}{P( \frac{y- \mu_y}{\sqrt(\sigma^2)} \leq \frac{10-7}{\sqrt(7)})} = 0.144
+$$
+\end{itemize}
+
+\miquestion\textbf{Distribuciones Poisson. }
+\text{ Sabemos que : } 
+$$ \lambda = 50 $$  
+\text{ Entonces : } 
+\begin{itemize}
+\item a) $\mu_x$, $\sigma_x$
+$$ \mu_x = 50 \text{ y } \sigma_x = 50 $$
+\item  b) P(x$<$35)
+\text{ Es lo mismo que : } 
+$$ P(x \leq 34) = .0108 $$
+\item  c) P(40$<$x$<$60) $\cong$ 0.8217
+
+\item  d) P(x$>$75)
+\text{ Por complemento: }
+$$ 1- P( x \leq 74) = 1 - .9994 \cong 0.0005 $$ 
+\end{itemize}
+
+\miquestion\textbf{Distribuciones Poisson. }
+
+\text{ Sabemos que las dos condiciones para que sea una función de probabilidad son : }
+\begin{itemize}
+\item a) $$ f_x (x) \geq 0 $$ 
+\item  b) $$ \sum f_x (x) = 1 $$
+\end{itemize}
+
+\text{ Entonces: }
+
+\begin{itemize}
+\item a) $f(0) = K(0^2 + 4) \geq 0 $
+$$ 4K \geq 0 $$
+ $$ k \geq 0/ 4$$
+$$ k \geq 0 $$
+
+\item  b) \text{ Ahora :  }
+$$f(0) = K(0^2 + 4) =  4K $$
+
+$$f(1) = K(1^2 + 4) =  5K $$
+
+$$f(2) = K(2^2 + 4) =  8K $$
+
+$$f(3) = K(3^2 + 4) =  13K $$
+\text{ Entonces: } 
+4K + 5k + 8k + 13k = 1
+$$ K = 1/30 $$
+\end{itemize}
+
+\miquestion\textbf{Funciones de Distribución Uniforme. }
+\begin{itemize}
+\item  a) $\mu_x$, $\sigma_x$
+$$ \mu = E(x)= \sum_x xp(x)$$ 
+\text{ Entonces:  }
+ $\mu_x$ = 2 ($\frac{1}{6} $) + 4($\frac{1}{6} $) + 6($\frac{1}{6} $) + ... = 7 
+
+$$ \sigma_x^2 = E[x^2]-E[x]^2 = 60.6667 - (7)^2 = 11.6667 $$ 
+ $ E[x^2] = \sum_x^2 xp(x)  = 60.6667 $ 
+ $$ = 2^2 (\frac{1}{6}) + 4^2(\frac{1}{6}) + 6^2(\frac{1}{6}) + ... =  60.6667 $$ 
+ 
+\text{ Entonces:  } 
+ $$ \sigma_x  = \sqrt11.6667 = 3.4157 $$ 
+
+
+\item  b) P[x$>$8] = 2/6
+
+\item  c) P[2$<$x$<$10 $\mid$ x$\geq$4]
+= $$  \frac{P(2 < x <10)}{P (x \geq 4)} = \frac{3/6}{5/6} = 0.6 $$ 
+\end{itemize}
+
+\miquestion\textbf { Función Geometrica Discreta}
+\begin{itemize}
+\item a)
+\text{ Tenemos que:   } 
+\text{ X = Número de llamadas a la estación hasta ser atendido}
+
+ \text {Éxito = llamada respondida}  
+
+\text{ Fracaso = llamada no respondida }
+$$ p = .06 \text{ y }
+(1 - p )= .94 $$ 
+\text{ Entonces :   } 
+$$ f(x) = (1-p)^{x-1} (p)  = (0.94)^9(0.06) = 0.0564 $$
+\item b) 
+$ E(x) = \frac{1}{p} $ 
+$ = \frac{1}{0.06} = 16.667 $
+\end{itemize}
+
+\miquestion\textbf { Función Geometrica Discreta}
+
+$$ p = .08 \text{ y }
+(1 - p )= .92 $$ 
+
+\text{ Entonces :   } 
+$$ f(x) = (1-p)^{x-1} (p)  = (0.92)^4(0.08) = 0.0573 $$
+
+\end {questions}
+
+\end{document}
