@@ -72,7 +72,7 @@
 \unframedsolutions
 
 \renewcommand{\subpartlabel}{(\thesubpart)}
-
+\extrawidth{2cm}
 %if you produce a problem sheet with solutions but want to strip the
 %solutions from the tex file (e.g. to give to a student who needs to use a
 %screen reader) you could run one of
