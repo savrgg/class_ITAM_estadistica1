@@ -16,78 +16,69 @@
 
 \text {Sabemos que: }
 
-$ P(par) = t $
+$$ P(par) = t $$
 
-$ P(impar) = 3t $
+$$ P(impar) = 3t $$
+
+Hay 3 números pares $(2,4,6)$, entonces sabemos que $P(X = 2)+ P(X = 4) + P(X = 6) = t$, entonces $P(X = 2) = P(X = 4) = P(X = 6) = t/3$. La misma logica lleva que $P(X = 1) = P(X = 3) = P(X = 5) = t$
+
+¿Cuanto vale t? Sabemos que $P(par)+P(impar) = 1$, entonces $t = 1/4$
 \text {Entonces: }
-
-$ x = 1/4 $
 
 \begin{itemize}
 
 \item a) El número sea par: 1/4
-
 \item b) El número sea primo:
 \text {Es la suma de la probabilidad de {1,2,3,5} : } 10/12  
-
-\item c) El número sea impar y mayor que dos: 1/2
+\item c) El número sea impar y mayor que dos {3,5}: 2/4 = 1/2
 
 \end{itemize}
-
-
 
 \miquestion
 \begin{itemize}
 
-\item a) P(solo un hombre)= 1/10 
-
-\item b) 2/10
-\item c) 3/10
-\end{itemize}
-
-
-\miquestion 
-\begin{itemize}
-
-\item a) Sí, P(A $\cap$ B) es diferente de cero 
-\item b) C es subconjunto de A 
-\item c) Sí, P(B $\cap$ C) es diferente de cero 
+\item a) P(solo un hombre)= $\frac{\binom{4}{1}\binom{6}{2}}{\binom{10}{3}}$ = 0.5
+\item b) P(como maximo a dos hombres)= $\frac{\binom{4}{0}\binom{6}{3}}{\binom{10}{3}}+ \frac{\binom{4}{1}\binom{6}{2}}{\binom{10}{3}} + \frac{\binom{4}{2}\binom{6}{1}}{\binom{10}{3}} = 0.1666 + 0.5 + 0.3 = 0.9666$
+\item c) P(Dos hombres y una mujer) = $\frac{\binom{4}{2}\binom{6}{1}}{\binom{10}{3}}  = 0.3$
 \end{itemize}
 
 \miquestion
 
 \begin{itemize}
 
-\item a) P(A$\mid$B)=1/2 = P(A), independientes 
-\item b) P(A$\mid$B) = 1 
 
-\item c) P(A$\mid$B) = 2/3  
+\item a) Se sabe que $P(A \mid B) = \frac{P(B \mid A) P (A) }{P(B)}$ Entonces: 
+$P(A \mid B) =  \frac{P(B \mid A) P (A) }{P(B)} = \frac{\frac{1}{4} \frac{1}{2} }{\frac{1}{4}} = 1/2 = P(A)$. Entonces implica independencia
+
+\item b) $P(A \mid B) = \frac{P(B \mid A) P (A) }{P(B)} = \frac{\frac{1}{2} \frac{1}{2} }{\frac{1}{4}} = 1$, Entonces implica que conociendo a B, tenemos completa certidumbre de A. Esto sucede si A es subconjunto de B
+
+\item c) $P(B \cap A) = P(B \mid  A) P(A) = 0$, Entonces implica que son mutuamente excluyentes
+
 \end{itemize}
+
 
 \miquestion 
 
 \begin{itemize}
 
 \item a) 
-P(A$\cap$B) = 0 
-
+Al ser mutuamente excluyentes implica que: $P(A \cap B) = 0$
 \text {Entonces:} 
+$$P(A \cup B)= P(A) + P(B) - P(A\cap B) = .43$$
 
-P(A $\cup$ B)= P(A) + P(B) - P(A$\cap$B) = .43
 \item b)
-P(A $\cap$ B) = P(A)*P(B) 
-
+Al ser independientes implica que : $P(A \cap B) = P(A)*P(B) $
 \text {Entonces:}
-P(A $\cup$ B)= P(A) + P(B) - P(A$\cap$B)
-.68 = .25 + P(B) - P(A)P(B) 
+$$P(A \cup B)= P(A) + P(B) - P(A\cap B)$$
+$$0.68 = 0.25 + P(B) - 0.25*P(B) $$
+$$P(B) = \frac{0.43}{0.75} = 0.57$$
 
-$P(B) = .43/.75 = .57$
-\item c)
-P(A $\cup$ B)= P(A) + P(B) - P(A$\cap$B) 
+\item c) al saber que $P(B|A) = 0.35$ entonces se sabe que $P(B \cap A) = P(B \mid A)P(A)$ Entonces: 
 
-.68 = .25 + P(B) - P(A)P(B$\mid$A) 
-
-$ P(B)= .5175$ 
+$$ P(A \cup B)= P(A) + P(B) - P(A \cap B) $$
+$$ P(A \cup B) = P(A) + P(B) - P(B \mid A) P(A)$$ 
+$$ 0.68 = 0.25 + P(B) - 0.35 * 0.25$$ 
+$$ P(B)= 0.5175 $$ 
 
 \end{itemize}
 
