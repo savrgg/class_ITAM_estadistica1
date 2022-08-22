@@ -22,36 +22,7 @@ $$
 \text {Entonces:} 
 P(x $\leq$ 1) = 0.9418
 
-\miquestion\textbf{Distribuciones Poisson.}
-\text {Tenemos que:} 
 
- \text{ y $\sim$ Poisson(7,7)} 
- \text{ Dado que: }
-$$ \lambda = 7. $$
- \text{ Entonces: } 
- 
- \begin{itemize}
-\item  a) 
-$$ 
- = P( Y \leq 4) = P( \frac{y- \mu_y}{\sqrt(\sigma^2)} \leq \frac{4-7}{\sqrt(7)}) 
- = 0.1956   % CORREGIDO 
-$$
-\item  b) P(3$<$ Y$\leq$8)
- \text{ Es lo mismo que : } 
-$$ P(Y \leq 8) - P(Y < 3)
-=  P( \frac{y- \mu_y}{\sqrt(\sigma^2)} \leq \frac{8-7}{\sqrt(7)}) -  P( \frac{y- \mu_y}{\sqrt(\sigma^2)} < \frac{3-7}{\sqrt(7)}) = 0.4859  % CORREGIDO
-$$
-
-\item  c) P(3$<$Y$<$8)
-\text{ Es lo mismo que : } 
-$$ P(Y < 8) - P(Y < 3)
-=  P( \frac{y- \mu_y}{\sqrt(\sigma^2)} < \frac{8-7}{\sqrt(7)}) -  P( \frac{y- \mu_y}{\sqrt(\sigma^2)} < \frac{3-7}{\sqrt(7)}) =   P (Z < \frac{3-7}{\sqrt(7)}) = 0.4234  % CORREGIDO
-$$ 
-\item  d) P(Y=8$\mid$Y$\leq$10)
-\text{ Es lo mismo que : }  
-$$ \frac{P( Y=8)}{P( Y \leq 10)} =  \frac{P(\frac{y- \mu_y}{\sqrt(\sigma^2)} =  \frac{8-7}{\sqrt(7)})}{P( \frac{y- \mu_y}{\sqrt(\sigma^2)} \leq \frac{10-7}{\sqrt(7)})} = 0.001 % CORREGIDO
-$$
-\end{itemize}
 
 \miquestion\textbf{Distribuciones Poisson. }
 \text{ Sabemos que : } 
@@ -60,17 +31,34 @@ $$ \lambda = 50 $$
 \begin{itemize}
 \item a) $\mu_x$, $\sigma_x$
 $$ \mu_x = 50 \text{ y } \sigma_x = 50 $$
+
 \item  b) P(x$<$35)
 \text{ Es lo mismo que : } 
-$$ P(x \leq 34) = .3744 $$ % CORREGIDO 
-\item  c) P(40$<$x$<$60) $\cong$ 0.1506 % CORREGIDO 
+$$ 
+P(x \leq 34)  = $$  
+ \text{ al estandarizar : } 
+$$ P( \frac{x - \mu_x}{\sigma_x}  \leq \frac{34-50}{50})  
+$$ 
+ $ = P(z \leq -0.32) $  = .3744  % CORREGIDO 
+ 
+ 
+ 
+\item  c) P(40$<$x$<$60) 
+\text{ Entonces: } 
+$  P (40 < x < 60) = P(x < 60) - P(x < 40) =  P(\frac{x - \mu_x}{\sigma_x} < \frac{60-50}{50}) - P(\frac{x - \mu_x}{\sigma_x} < \frac{40-50}{50}) 
+$
+= P(z $<$ 0.2) - P(z$<$ - 0.2) $\cong$ 0.1506 % CORREGIDO  
+
 
 \item  d) P(x$>$75)
+
 \text{ Por complemento: }
-$$ 1- P( x \leq 74) = 1 - 0.6843  = 0.3156  $$  % CORREGIDO 
+$$ 1- P( x \leq 74) = 1- P(\frac{x - \mu_x}{\sigma_x} \leq \frac{74-50}{50}) 
+= 1- P(z \leq 0.48) 
+= 1 - 0.6843  = 0.3156  $$  % CORREGIDO 
 \end{itemize}
 
-\miquestion\textbf{Distribuciones Poisson. }
+\miquestion 
 
 \text{ Sabemos que las dos condiciones para que sea una función de probabilidad son : }
 \begin{itemize}
