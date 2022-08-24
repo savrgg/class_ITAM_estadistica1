@@ -35,8 +35,8 @@ Determinar:
 (2000 )\int_{0}^{200} (x+100)^{-3} \cdot dx
 \end{equation}
 = 2000[$\frac{(x+100)^{-2}}{-2}]^{200}_{0}$  = 
-2000[$\frac{1}{-2(300)^2}]$ = 
-2000[$\frac{1}{-180 000}]$
+2000[$\frac{1}{-2(300)^2}]$ - 2000[$\frac{1}{-2(100)^2}]  = $
+ $ 2000[\frac{1}{-180 000}]  + 2000[\frac{1}{20000}] = 0.889 $
 
 
 \item  b) La probabilidad de entre 90 y 130 días.
@@ -51,8 +51,7 @@ Determinar:
 (2000 )\int_{90}^{130} (x+100)^{-3} \cdot dx
 \end{equation}
 = 2000[$\frac{(x+100)^{-2}}{-2}]^{130}_{90}$  = 
-2000[$\frac{1}{-2(130 + 100)^2}]$[$\frac{1}{-2(90 + 100)^2}]$ = 
-2000(0.0000043) $\cong$ 0.0087
+2000[$\frac{1}{-2(130 + 100)^2}] - 2000$[$\frac{1}{-2(90 + 100)^2}]$  $\cong$ 0.0087
 
 \item  c) La vida útil promedio del medicamento. 
 \text{Tenemos que calcular E(X), entonces:  }
@@ -74,30 +73,6 @@ $2000 (\frac{x^2}{2})(\frac{(x+100)^{-2}}{-2})$
 
 = $2000 (\frac{x^2(x+100)^{-2}}{4})$ =  $2000 (\frac{x^2}{4(x+100)^{2}})$ = 0.8737
 
-
-\item  d) La varianza de la vida útil del medicamento: 
-\text{ Sabemos que } 
-$$ \sigma_x^2 = E[x^2]-E[x]^2$$ 
-\text{Entonces } 
-\begin{equation}
-\int x^2(\frac{2000}{(x+100)^3}) \cdot dx
-\end{equation}
-
-=  \begin{equation}
-\int \frac{2000x^2}{(x+100)^3} \cdot dx
-\end{equation}
-
-=   \begin{equation}
-\int 2000 (\frac{x^2}{(x+100)^3}) \cdot dx
-\end{equation}
-
-= \begin{equation}
-2000 \int  (\frac{x^2}{(x+100)^3}) \cdot dx
-\end{equation}
-= 39.44
-
-\text{ Ahora:  }
-$$ \sigma_x^2 = E[x^2]-E[x]^2$$  = $39.44 - (0.8737)^2 = 38.67$
 \end{itemize}
 
 \miquestion\textbf{Función de densidad}
@@ -152,18 +127,12 @@ $$
 
 \item  c) La probabilidad de que x menor a 1/4
 \begin{equation}
-\int_{-\infty}^{1/4} \frac{1}{4\sqrt{x}} \cdot dx
+\int_{0}^{1/4} \frac{1}{4\sqrt{x}} \cdot dx
 \end{equation} 
-=  $[\frac{1}{2}\sqrt{x}]_{-\infty}^{1/4}$ = $\frac{1}{2}\sqrt{1/4}$
+=  $[\frac{1}{2}\sqrt{x}]_{0}^{1/4}$ = $\frac{1}{2}\sqrt{1/4}$ - 0 
 = $\frac{1}{2}$ 
 
 
-\item  d) La probabilidad de que x mayor a 1
-\begin{equation}
- \int_{1}^{\infty} \frac{1}{4\sqrt{x}} \cdot dx
-\end{equation}
-
-=  $[\frac{1}{2}\sqrt{x}]_{1}^{\infty}$ = - $[\frac{1}{2}\sqrt{1}]$ = - $\frac{1}{4}$ 
 
 \end{itemize}
 
