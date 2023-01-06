@@ -1,1 +1,9 @@
-# Repositorio para notas, tareas y examenes pasados del curso de Estadística 1 del ITAM
+# Repositorio para curso de Estadistica 1 - ITAM 
+
+Notas:
+
+Tareas: 
+
+Solución Tareas:
+
+Examenes Pasados: 
