@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Introducción | A Minimal Book Example</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Introducción | A Minimal Book Example" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Introducción | A Minimal Book Example" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  
+
+<meta name="author" content="John Doe" />
+
+
+<meta name="date" content="2023-06-28" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="dsa1asds.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Index</a></li>
+<li class="chapter" data-level="2" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i><b>2</b> Introducción</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introducción.html"><a href="introducción.html#importancia-de-los-datos"><i class="fa fa-check"></i><b>2.1</b> Importancia de los datos</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="introducción.html"><a href="introducción.html#importancia-de-los-datos-en-la-resolución-de-problemas"><i class="fa fa-check"></i><b>2.1.1</b> Importancia de los datos en la resolución de problemas</a></li>
+<li class="chapter" data-level="2.1.2" data-path="introducción.html"><a href="introducción.html#importancia-de-los-datos-en-la-toma-de-decisiones"><i class="fa fa-check"></i><b>2.1.2</b> Importancia de los datos en la toma de decisiones</a></li>
+<li class="chapter" data-level="2.1.3" data-path="introducción.html"><a href="introducción.html#conclusión"><i class="fa fa-check"></i><b>2.1.3</b> Conclusión</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="introducción.html"><a href="introducción.html#calidad-de-los-datos"><i class="fa fa-check"></i><b>2.2</b> Calidad de los datos</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="introducción.html"><a href="introducción.html#exactitud"><i class="fa fa-check"></i><b>2.2.1</b> Exactitud</a></li>
+<li class="chapter" data-level="2.2.2" data-path="introducción.html"><a href="introducción.html#consistencia"><i class="fa fa-check"></i><b>2.2.2</b> Consistencia</a></li>
+<li class="chapter" data-level="2.2.3" data-path="introducción.html"><a href="introducción.html#integridad"><i class="fa fa-check"></i><b>2.2.3</b> Integridad</a></li>
+<li class="chapter" data-level="2.2.4" data-path="introducción.html"><a href="introducción.html#actualidad"><i class="fa fa-check"></i><b>2.2.4</b> Actualidad</a></li>
+<li class="chapter" data-level="2.2.5" data-path="introducción.html"><a href="introducción.html#conclusión-1"><i class="fa fa-check"></i><b>2.2.5</b> Conclusión</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="introducción.html"><a href="introducción.html#variación-de-los-datos"><i class="fa fa-check"></i><b>2.3</b> Variación de los datos</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="introducción.html"><a href="introducción.html#concepto-de-variación"><i class="fa fa-check"></i><b>2.3.1</b> Concepto de variación</a></li>
+<li class="chapter" data-level="2.3.2" data-path="introducción.html"><a href="introducción.html#ejemplos-de-variación-de-datos"><i class="fa fa-check"></i><b>2.3.2</b> Ejemplos de variación de datos</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="introducción.html"><a href="introducción.html#estadística-para-modelar-variación"><i class="fa fa-check"></i><b>2.4</b> Estadística para modelar variación</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="introducción.html"><a href="introducción.html#conceptos-básicos"><i class="fa fa-check"></i><b>2.4.1</b> Conceptos básicos</a></li>
+<li class="chapter" data-level="2.4.2" data-path="introducción.html"><a href="introducción.html#conclusiones"><i class="fa fa-check"></i><b>2.4.2</b> Conclusiones</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="dsa1asds.html"><a href="dsa1asds.html"><i class="fa fa-check"></i><b>3</b> dsa1asds</a></li>
+<li class="chapter" data-level="4" data-path="sdas1asdas.html"><a href="sdas1asdas.html"><i class="fa fa-check"></i><b>4</b> sdas1asdas</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">A Minimal Book Example</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introducción" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Introducción<a href="introducción.html#introducción" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="importancia-de-los-datos" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Importancia de los datos<a href="introducción.html#importancia-de-los-datos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La disponibilidad y el acceso a grandes cantidades de datos se ha convertido en una característica distintiva de la era digital en la que vivimos. Los datos son la materia prima fundamental en la resolución de problemas y la toma de decisiones en diversos campos, desde la ciencia y la tecnología hasta los negocios y la política.</p>
+<div id="importancia-de-los-datos-en-la-resolución-de-problemas" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Importancia de los datos en la resolución de problemas<a href="introducción.html#importancia-de-los-datos-en-la-resolución-de-problemas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La resolución de problemas implica identificar y encontrar soluciones efectivas a situaciones complejas. Los datos desempeñan un papel crucial en este proceso, ya que proporcionan información objetiva y cuantificable sobre el problema en cuestión. Aquí se presentan algunos ejemplos de cómo los datos pueden ser fundamentales en la resolución de problemas:</p>
+<div id="ejemplo-1-investigación-científica" class="section level4 hasAnchor" number="2.1.1.1">
+<h4><span class="header-section-number">2.1.1.1</span> Ejemplo 1: Investigación científica<a href="introducción.html#ejemplo-1-investigación-científica" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>En la investigación científica, los datos son esenciales para formular hipótesis, realizar experimentos y analizar resultados. Los científicos recopilan datos de diversas fuentes, como experimentos de laboratorio, encuestas, observaciones o bases de datos existentes. Estos datos son analizados para extraer conclusiones y tomar decisiones fundamentadas en los resultados obtenidos.</p>
+</div>
+<div id="ejemplo-2-diagnóstico-médico" class="section level4 hasAnchor" number="2.1.1.2">
+<h4><span class="header-section-number">2.1.1.2</span> Ejemplo 2: Diagnóstico médico<a href="introducción.html#ejemplo-2-diagnóstico-médico" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>En el ámbito de la medicina, los datos desempeñan un papel crucial en el diagnóstico de enfermedades y la toma de decisiones clínicas. Los médicos recopilan datos de pacientes, como síntomas, historial médico, resultados de pruebas y análisis de laboratorio. Estos datos se utilizan para identificar patrones, establecer diagnósticos y diseñar planes de tratamiento adecuados.</p>
+</div>
+<div id="ejemplo-3-optimización-de-procesos-empresariales" class="section level4 hasAnchor" number="2.1.1.3">
+<h4><span class="header-section-number">2.1.1.3</span> Ejemplo 3: Optimización de procesos empresariales<a href="introducción.html#ejemplo-3-optimización-de-procesos-empresariales" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>En el ámbito empresarial, los datos son fundamentales para optimizar procesos y mejorar la eficiencia. Por ejemplo, en la gestión de la cadena de suministro, los datos sobre inventario, demanda del mercado y tiempos de entrega pueden utilizarse para identificar cuellos de botella y mejorar la planificación de la producción y distribución.</p>
+</div>
+</div>
+<div id="importancia-de-los-datos-en-la-toma-de-decisiones" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Importancia de los datos en la toma de decisiones<a href="introducción.html#importancia-de-los-datos-en-la-toma-de-decisiones" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La toma de decisiones efectiva depende en gran medida de la calidad de los datos disponibles. Aquí se presentan algunos ejemplos que destacan la importancia de los datos en este contexto:</p>
+<div id="ejemplo-1-política-pública" class="section level4 hasAnchor" number="2.1.2.1">
+<h4><span class="header-section-number">2.1.2.1</span> Ejemplo 1: Política Pública<a href="introducción.html#ejemplo-1-política-pública" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Los datos desempeñan un papel fundamental en la formulación y evaluación de políticas públicas. Los gobiernos recopilan datos demográficos, económicos, sociales y de salud para comprender mejor las necesidades de la población y tomar decisiones informadas sobre políticas de educación, salud, empleo, entre otras.</p>
+</div>
+<div id="ejemplo-2-marketing-y-publicidad" class="section level4 hasAnchor" number="2.1.2.2">
+<h4><span class="header-section-number">2.1.2.2</span> Ejemplo 2: Marketing y publicidad<a href="introducción.html#ejemplo-2-marketing-y-publicidad" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>En el ámbito del marketing y la publicidad, los datos son esenciales para segmentar audiencias, comprender el comportamiento del consumidor y desarrollar estrategias efectivas. El análisis de datos permite a las empresas recopilar información sobre las preferencias, intereses y hábitos de los clientes, lo que a su vez les ayuda a personalizar mensajes y anuncios para maximizar el impacto y las conversiones.</p>
+</div>
+<div id="ejemplo-3-gestión-financiera" class="section level4 hasAnchor" number="2.1.2.3">
+<h4><span class="header-section-number">2.1.2.3</span> Ejemplo 3: Gestión financiera<a href="introducción.html#ejemplo-3-gestión-financiera" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>En el sector financiero, los datos son fundamentales para la toma de decisiones de inversión y gestión de riesgos. Los analistas financieros recopilan y analizan datos sobre los mercados, las empresas y las tendencias económicas para identificar oportunidades de inversión y evaluar los posibles riesgos asociados.</p>
+</div>
+</div>
+<div id="conclusión" class="section level3 hasAnchor" number="2.1.3">
+<h3><span class="header-section-number">2.1.3</span> Conclusión<a href="introducción.html#conclusión" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En resumen, los datos desempeñan un papel fundamental en la resolución de problemas y la toma de decisiones en una amplia variedad de contextos. Permiten fundamentar las decisiones en información objetiva y cuantificable, facilitando la identificación de patrones, la formulación de hipótesis y la evaluación de opciones. La capacidad de recopilar, analizar y utilizar datos de manera efectiva se ha convertido en una habilidad cada vez más valiosa en el mundo actual, donde la información es abundante pero su interpretación correcta y relevante es esencial para la toma de decisiones acertadas.</p>
+</div>
+</div>
+<div id="calidad-de-los-datos" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Calidad de los datos<a href="introducción.html#calidad-de-los-datos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La calidad de los datos se refiere a la medida en que los datos son precisos, confiables y adecuados para su uso previsto. Los datos de alta calidad son esenciales para la toma de decisiones y la generación de información confiable. A continuación, exploraremos algunos aspectos clave de la calidad de los datos y presentaremos ejemplos de datos no limpios o de baja calidad.</p>
+<div id="exactitud" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Exactitud<a href="introducción.html#exactitud" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La exactitud se refiere a la medida en que los datos representan con precisión la realidad que pretenden representar. Los datos inexactos pueden surgir debido a errores humanos, fallos en los procesos de recopilación de datos o problemas técnicos. A continuación se presentan algunos ejemplos de datos inexactos:</p>
+<div id="ejemplo-1-errores-de-entrada-de-datos" class="section level4 hasAnchor" number="2.2.1.1">
+<h4><span class="header-section-number">2.2.1.1</span> Ejemplo 1: Errores de entrada de datos<a href="introducción.html#ejemplo-1-errores-de-entrada-de-datos" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Cuando los datos se ingresan manualmente, existe la posibilidad de cometer errores de escritura, como errores tipográficos o invertir dígitos. Por ejemplo, un número de identificación de cliente podría registrarse incorrectamente en un sistema debido a un error de entrada.</p>
+</div>
+<div id="ejemplo-2-mediciones-inexactas" class="section level4 hasAnchor" number="2.2.1.2">
+<h4><span class="header-section-number">2.2.1.2</span> Ejemplo 2: Mediciones inexactas<a href="introducción.html#ejemplo-2-mediciones-inexactas" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>En algunos casos, los datos pueden derivar de mediciones inexactas. Por ejemplo, si se utiliza un instrumento de medición defectuoso o si no se siguen correctamente los procedimientos de medición, los datos resultantes pueden estar sesgados o no representar con precisión la magnitud real.</p>
+</div>
+<div id="ejemplo-3-información-desactualizada" class="section level4 hasAnchor" number="2.2.1.3">
+<h4><span class="header-section-number">2.2.1.3</span> Ejemplo 3: Información desactualizada<a href="introducción.html#ejemplo-3-información-desactualizada" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Los datos desactualizados también pueden afectar la exactitud. Por ejemplo, si se utilizan datos de ventas obsoletos para tomar decisiones de inventario, es probable que los resultados sean imprecisos y no reflejen la demanda actual.</p>
+</div>
+</div>
+<div id="consistencia" class="section level3 hasAnchor" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Consistencia<a href="introducción.html#consistencia" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La consistencia se refiere a la uniformidad y coherencia de los datos a lo largo del tiempo y en diferentes fuentes. Los datos inconsistentes pueden presentar discrepancias, duplicaciones o contradicciones. A continuación se presentan algunos ejemplos de datos inconsistentes:</p>
+<div id="ejemplo-1-formato-inconsistente" class="section level4 hasAnchor" number="2.2.2.1">
+<h4><span class="header-section-number">2.2.2.1</span> Ejemplo 1: Formato inconsistente<a href="introducción.html#ejemplo-1-formato-inconsistente" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Cuando los datos se recopilan de diferentes fuentes o por diferentes personas, es posible que se utilicen formatos inconsistentes. Por ejemplo, en una base de datos de clientes, algunos registros pueden tener el formato “Apellido, Nombre” mientras que otros tienen el formato “Nombre Apellido”. Esta inconsistencia dificulta el análisis y la comparación de datos.</p>
+</div>
+<div id="ejemplo-2-valores-duplicados" class="section level4 hasAnchor" number="2.2.2.2">
+<h4><span class="header-section-number">2.2.2.2</span> Ejemplo 2: Valores duplicados<a href="introducción.html#ejemplo-2-valores-duplicados" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>La presencia de valores duplicados en un conjunto de datos puede afectar su consistencia. Por ejemplo, si se permite que se registren múltiples veces los mismos clientes en una base de datos, puede generar problemas al realizar análisis o cálculos estadísticos.</p>
+</div>
+<div id="ejemplo-3-datos-contradictorios" class="section level4 hasAnchor" number="2.2.2.3">
+<h4><span class="header-section-number">2.2.2.3</span> Ejemplo 3: Datos contradictorios<a href="introducción.html#ejemplo-3-datos-contradictorios" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Los datos contradictorios son aquellos que presentan información opuesta o incompatible. Por ejemplo, si en un sistema de gestión de inventario se registran dos cantidades diferentes para un mismo producto, es difícil determinar cuál es la información correcta y confiable.</p>
+</div>
+</div>
+<div id="integridad" class="section level3 hasAnchor" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Integridad<a href="introducción.html#integridad" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La integridad de los datos se refiere a su completitud y validez. Los datosincompletos o no válidos pueden surgir debido a la falta de registros, la ausencia de valores clave o la violación de restricciones y reglas. A continuación se presentan algunos ejemplos de datos no limpios en términos de integridad:</p>
+<div id="ejemplo-1-campos-vacíos" class="section level4 hasAnchor" number="2.2.3.1">
+<h4><span class="header-section-number">2.2.3.1</span> Ejemplo 1: Campos vacíos<a href="introducción.html#ejemplo-1-campos-vacíos" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Cuando los campos requeridos en un conjunto de datos no se completan, se generan datos incompletos. Por ejemplo, si un formulario de registro en línea no obliga a completar todos los campos obligatorios, es posible que algunos registros tengan campos vacíos, lo que dificulta su análisis y uso posterior.</p>
+</div>
+<div id="ejemplo-2-valores-no-válidos" class="section level4 hasAnchor" number="2.2.3.2">
+<h4><span class="header-section-number">2.2.3.2</span> Ejemplo 2: Valores no válidos<a href="introducción.html#ejemplo-2-valores-no-válidos" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Los valores no válidos son aquellos que no cumplen con las restricciones o reglas establecidas. Por ejemplo, si un campo de edad solo permite valores numéricos y se ingresa un texto en ese campo, se viola la validez de los datos.</p>
+</div>
+<div id="ejemplo-3-datos-faltantes-o-nulos" class="section level4 hasAnchor" number="2.2.3.3">
+<h4><span class="header-section-number">2.2.3.3</span> Ejemplo 3: Datos faltantes o nulos<a href="introducción.html#ejemplo-3-datos-faltantes-o-nulos" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Los datos faltantes o nulos son aquellos que deberían estar presentes pero no se registraron. Esto puede ocurrir debido a errores en la recopilación de datos o a problemas en los procesos de almacenamiento. Por ejemplo, si falta la fecha de nacimiento de un cliente en una base de datos, la integridad de los datos se ve comprometida y puede dificultar el análisis.</p>
+</div>
+</div>
+<div id="actualidad" class="section level3 hasAnchor" number="2.2.4">
+<h3><span class="header-section-number">2.2.4</span> Actualidad<a href="introducción.html#actualidad" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La actualidad de los datos se refiere a su relevancia en el momento presente. Los datos desactualizados pueden generar problemas al tomar decisiones o realizar análisis basados en información obsoleta. A continuación se presentan algunos ejemplos de datos desactualizados</p>
+<div id="ejemplo-1-información-de-inventario-desactualizada" class="section level4 hasAnchor" number="2.2.4.1">
+<h4><span class="header-section-number">2.2.4.1</span> Ejemplo 1: Información de inventario desactualizada<a href="introducción.html#ejemplo-1-información-de-inventario-desactualizada" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>En un sistema de gestión de inventario, si la información sobre los niveles de stock no se actualiza regularmente, existe el riesgo de que los datos no reflejen con precisión la disponibilidad actual de productos.</p>
+</div>
+<div id="ejemplo-2-datos-demográficos-desactualizados" class="section level4 hasAnchor" number="2.2.4.2">
+<h4><span class="header-section-number">2.2.4.2</span> Ejemplo 2: Datos demográficos desactualizados<a href="introducción.html#ejemplo-2-datos-demográficos-desactualizados" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>En el contexto de análisis demográfico o de segmentación de mercado, la utilización de datos demográficos desactualizados puede llevar a conclusiones incorrectas o a la implementación de estrategias ineficaces. Por ejemplo, si se utilizan datos demográficos de hace varios años para dirigir una campaña publicitaria, es posible que no se tenga en cuenta la evolución de las características demográficas de la población objetivo.</p>
+</div>
+<div id="ejemplo-3-precios-o-tasas-desactualizados" class="section level4 hasAnchor" number="2.2.4.3">
+<h4><span class="header-section-number">2.2.4.3</span> Ejemplo 3: Precios o tasas desactualizados<a href="introducción.html#ejemplo-3-precios-o-tasas-desactualizados" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>En contextos financieros o comerciales, utilizar precios o tasas desactualizados puede llevar a errores en los cálculos y en la toma de decisiones. Por ejemplo, si se utilizan tasas de cambio desactualizadas al realizar operaciones de comercio internacional, los resultados pueden ser incorrectos y generar pérdidas económicas.</p>
+</div>
+</div>
+<div id="conclusión-1" class="section level3 hasAnchor" number="2.2.5">
+<h3><span class="header-section-number">2.2.5</span> Conclusión<a href="introducción.html#conclusión-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La calidad de los datos es fundamental para garantizar que la información utilizada en la toma de decisiones sea precisa, confiable y útil. Los datos inexactos, inconsistentes, incompletos o desactualizados pueden generar problemas y conducir a decisiones erróneas. Es importante reconocer la importancia de mantener altos estándares de calidad de datos y realizar esfuerzos continuos para mejorar la precisión, consistencia, integridad y actualidad de los mismos.</p>
+</div>
+</div>
+<div id="variación-de-los-datos" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Variación de los datos<a href="introducción.html#variación-de-los-datos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La variación de los datos se refiere a las diferencias o fluctuaciones que existen entre los valores individuales de un conjunto de datos. Esta variación es una medida importante para comprender la dispersión, la heterogeneidad y la diversidad de los datos. En esta sección, exploraremos el concepto de variación y presentaremos ejemplos que ilustran diferentes formas en que la variación puede manifestarse.</p>
+<div id="concepto-de-variación" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Concepto de variación<a href="introducción.html#concepto-de-variación" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La variación es una medida de la dispersión o diferencia entre los valores individuales de un conjunto de datos. Se utiliza para comprender la diversidad y heterogeneidad presentes en los datos y proporciona información valiosa sobre la distribución y las características del conjunto de datos. La variación puede ser causada por diversos factores, como la variabilidad natural, los errores de medición o las diferencias en las características de la población.</p>
+<p>Existen diferentes medidas y técnicas para evaluar y describir la variación de los datos, como la desviación estándar, el rango intercuartílico y los gráficos de dispersión. Estas herramientas nos permiten cuantificar y visualizar la variabilidad presente en los datos.</p>
+</div>
+<div id="ejemplos-de-variación-de-datos" class="section level3 hasAnchor" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Ejemplos de variación de datos<a href="introducción.html#ejemplos-de-variación-de-datos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A continuación, se presentan algunos ejemplos que ilustran diferentes formas en que la variación puede manifestarse en los datos:</p>
+<div id="ejemplo-1-variación-temporal" class="section level4 hasAnchor" number="2.3.2.1">
+<h4><span class="header-section-number">2.3.2.1</span> Ejemplo 1: Variación temporal<a href="introducción.html#ejemplo-1-variación-temporal" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Supongamos que se recopilan datos diarios de temperatura en una ciudad a lo largo de un año. Estos datos mostrarán una variación temporal, ya que las temperaturas variarán a lo largo de las estaciones, los meses o incluso los días. La variación en los datos puede revelar patrones estacionales, tendencias ascendentes o descendentes, y ayudar a comprender la variabilidad climática en esa región.</p>
+</div>
+<div id="ejemplo-2-variación-geográfica" class="section level4 hasAnchor" number="2.3.2.2">
+<h4><span class="header-section-number">2.3.2.2</span> Ejemplo 2: Variación geográfica<a href="introducción.html#ejemplo-2-variación-geográfica" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Si se recopilan datos demográficos de diferentes regiones o países, es probable que se observe una variación geográfica. Por ejemplo, al analizar la distribución de ingresos en diferentes áreas geográficas, es probable que existan diferencias significativas en los niveles de ingresos. La variación geográfica puede ser el resultado de factores como diferencias económicas, culturales o políticas entre las regiones.</p>
+</div>
+<div id="ejemplo-3-variación-en-mediciones-repetidas" class="section level4 hasAnchor" number="2.3.2.3">
+<h4><span class="header-section-number">2.3.2.3</span> Ejemplo 3: Variación en mediciones repetidas<a href="introducción.html#ejemplo-3-variación-en-mediciones-repetidas" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Cuando se realizan mediciones repetidas de una misma variable, es común observar variación en los resultados. Por ejemplo, si se mide la altura de una muestra de plantas en diferentes momentos del día, es probable que se observe variación en las mediciones debido a factores como la fluctuación natural del crecimiento de las plantas o errores de medición. La variación en las mediciones repetidas puede ser evaluada mediante medidas de dispersión, como la desviación estándar.</p>
+</div>
+<div id="ejemplo-4-variación-en-datos-de-ventas" class="section level4 hasAnchor" number="2.3.2.4">
+<h4><span class="header-section-number">2.3.2.4</span> Ejemplo 4: Variación en datos de ventas<a href="introducción.html#ejemplo-4-variación-en-datos-de-ventas" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>En el ámbito empresarial, los datos de ventas suelen mostrar variación. Por ejemplo, al analizar los ingresos de una tienda a lo largo de diferentes días de la semana, es probable que se observe variación en los montos de venta</p>
+</div>
+</div>
+</div>
+<div id="estadística-para-modelar-variación" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Estadística para modelar variación<a href="introducción.html#estadística-para-modelar-variación" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>La estadística es una disciplina que utiliza herramientas y técnicas para recopilar, organizar, analizar e interpretar datos con el objetivo de comprender y explicar fenómenos basados en la variabilidad de los mismos:</p>
+<div id="conceptos-básicos" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Conceptos básicos<a href="introducción.html#conceptos-básicos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Antes de adentrarnos en los ejemplos, es importante entender algunos conceptos básicos de estadística:</p>
+<div id="población-y-muestra" class="section level4 hasAnchor" number="2.4.1.1">
+<h4><span class="header-section-number">2.4.1.1</span> Población y muestra<a href="introducción.html#población-y-muestra" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Una población se refiere al conjunto completo de elementos o individuos que estamos estudiando. Por ejemplo, si estamos interesados en estudiar la altura de todos los estudiantes de una universidad en particular, la población serían todos los estudiantes de esa universidad.</p>
+<p>Una muestra, por otro lado, es un subconjunto de la población seleccionado para el estudio. Dado que puede ser difícil o costoso medir o recolectar datos de toda la población, la muestra se utiliza como una representación más manejable y práctica de la población.</p>
+</div>
+<div id="parámetros-y-estadísticos" class="section level4 hasAnchor" number="2.4.1.2">
+<h4><span class="header-section-number">2.4.1.2</span> Parámetros y estadísticos<a href="introducción.html#parámetros-y-estadísticos" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Un parámetro es una medida numérica que describe una característica específica de una población. Por ejemplo, la media y la desviación estándar son parámetros que pueden utilizarse para describir la distribución de alturas de todos los estudiantes de la universidad.</p>
+<p>Un estadístico, por otro lado, es una medida numérica calculada a partir de una muestra y se utiliza para inferir o estimar los parámetros de la población. Por ejemplo, si calculamos la media y la desviación estándar de una muestra de estudiantes, estos valores se considerarían estadísticos.</p>
+</div>
+<div id="ejemplo-1-media-y-desviación-estándar" class="section level4 hasAnchor" number="2.4.1.3">
+<h4><span class="header-section-number">2.4.1.3</span> Ejemplo 1: Media y desviación estándar<a href="introducción.html#ejemplo-1-media-y-desviación-estándar" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Supongamos que tenemos una muestra de alturas de estudiantes universitarios. Utilizando la estadística descriptiva, podemos calcular la media y la desviación estándar de las alturas. La media nos proporciona una medida de la altura promedio en la muestra, mientras que la desviación estándar nos indica qué tan dispersas están las alturas alrededor de la media. Estos valores nos ayudan a comprender la variación en las alturas de los estudiantes y a obtener una descripción resumida de los datos</p>
+</div>
+<div id="ejemplo-2-gráficos-de-dispersión" class="section level4 hasAnchor" number="2.4.1.4">
+<h4><span class="header-section-number">2.4.1.4</span> Ejemplo 2: Gráficos de dispersión<a href="introducción.html#ejemplo-2-gráficos-de-dispersión" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Los gráficos de dispersión son una herramienta visual utilizada en la estadística para representar la relación entre dos variables. Supongamos que estamos estudiando la relación entre las horas de estudio y las calificaciones de un grupo de estudiantes. Al crear un gráfico de dispersiónque muestre las horas de estudio en el eje x y las calificaciones en el eje y, podemos observar la variación en las calificaciones en función de las horas de estudio. Podemos identificar patrones, como una relación positiva entre las horas de estudio y las calificaciones, o una dispersión más amplia de las calificaciones para ciertos niveles de horas de estudio. Estos gráficos nos permiten visualizar y comprender la variación en los datos.</p>
+</div>
+<div id="ejemplo-3-pruebas-de-hipótesis" class="section level4 hasAnchor" number="2.4.1.5">
+<h4><span class="header-section-number">2.4.1.5</span> Ejemplo 3: Pruebas de hipótesis<a href="introducción.html#ejemplo-3-pruebas-de-hipótesis" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Las pruebas de hipótesis son una herramienta estadística utilizada para tomar decisiones basadas en datos y para inferir características de una población a partir de una muestra. Por ejemplo, supongamos que queremos determinar si el promedio de calificaciones de los estudiantes de una universidad es mayor que un valor específico. Podemos realizar una prueba de hipótesis utilizando la muestra de calificaciones y los conocimientos estadísticos adecuados. Esta prueba nos ayudará a tomar una decisión y a inferir si hay evidencia suficiente para respaldar la afirmación de que el promedio de calificaciones es mayor o no.</p>
+</div>
+</div>
+<div id="conclusiones" class="section level3 hasAnchor" number="2.4.2">
+<h3><span class="header-section-number">2.4.2</span> Conclusiones<a href="introducción.html#conclusiones" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La estadística es una disciplina que nos brinda herramientas y técnicas para comprender, modelar y tomar decisiones basadas en la variación de los datos. Utilizando conceptos como población, muestra, parámetros, estadísticos, media, desviación estándar, gráficos de dispersión y pruebas de hipótesis, podemos explorar y comprender la variación presente en diferentes conjuntos de datos.</p>
+<p>Estos ejemplos ilustran cómo la estadística puede ser utilizada para modelar y analizar la variación, incluso para aquellos con poco conocimiento estadístico. La estadística nos ayuda a describir y resumir los datos, identificar patrones, realizar inferencias y tomar decisiones informadas. Al comprender y aplicar los principios estadísticos, podemos obtener una visión más profunda y significativa de los datos y utilizarla para abordar preguntas y problemas en diversas áreas, desde la investigación científica hasta los negocios y la toma de decisiones cotidiana.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="dsa1asds.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-introduction.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-example.pdf", "bookdown-example.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
