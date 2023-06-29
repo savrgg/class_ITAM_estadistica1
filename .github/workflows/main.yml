@@ -1,0 +1,29 @@
+name: Deploy to Netlify
+
+on:
+  push:
+    branches:
+      - deploy_branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: |
+        R -e "install.packages(c('bookdown', 'remotes'))"
+        R -e "remotes::install_github('rstudio/bookdown')"
+
+    - name: Build book
+      run: |
+        R -e "bookdown::render_book('index.Rmd')"
+
+    - name: Deploy to Netlify
+      uses: nwtgck/actions-netlify@v1
+      with:
+        netlify_api_token: ${{ secrets.NETLIFY_API_TOKEN }}
+        publish_directory: docs
